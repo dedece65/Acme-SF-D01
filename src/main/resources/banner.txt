@@ -1,0 +1,23 @@
+                                                                                                                                              
+               AAA                  CCCCCCCCCCCCCMMMMMMMM               MMMMMMMMEEEEEEEEEEEEEEEEEEEEEE        SSSSSSSSSSSSSSS FFFFFFFFFFFFFFFFFFFFFF
+              A:::A              CCC::::::::::::CM:::::::M             M:::::::ME::::::::::::::::::::E      SS:::::::::::::::SF::::::::::::::::::::F
+             A:::::A           CC:::::::::::::::CM::::::::M           M::::::::ME::::::::::::::::::::E     S:::::SSSSSS::::::SF::::::::::::::::::::F
+            A:::::::A         C:::::CCCCCCCC::::CM:::::::::M         M:::::::::MEE::::::EEEEEEEEE::::E     S:::::S     SSSSSSSFF::::::FFFFFFFFF::::F
+           A:::::::::A       C:::::C       CCCCCCM::::::::::M       M::::::::::M  E:::::E       EEEEEE     S:::::S              F:::::F       FFFFFF
+          A:::::A:::::A     C:::::C              M:::::::::::M     M:::::::::::M  E:::::E                  S:::::S              F:::::F             
+         A:::::A A:::::A    C:::::C              M:::::::M::::M   M::::M:::::::M  E::::::EEEEEEEEEE         S::::SSSS           F::::::FFFFFFFFFF   
+        A:::::A   A:::::A   C:::::C              M::::::M M::::M M::::M M::::::M  E:::::::::::::::E          SS::::::SSSSS      F:::::::::::::::F   
+       A:::::A     A:::::A  C:::::C              M::::::M  M::::M::::M  M::::::M  E:::::::::::::::E            SSS::::::::SS    F:::::::::::::::F   
+      A:::::AAAAAAAAA:::::A C:::::C              M::::::M   M:::::::M   M::::::M  E::::::EEEEEEEEEE               SSSSSS::::S   F::::::FFFFFFFFFF   
+     A:::::::::::::::::::::AC:::::C              M::::::M    M:::::M    M::::::M  E:::::E                              S:::::S  F:::::F             
+    A:::::AAAAAAAAAAAAA:::::AC:::::C       CCCCCCM::::::M     MMMMM     M::::::M  E:::::E       EEEEEE                 S:::::S  F:::::F             
+   A:::::A             A:::::AC:::::CCCCCCCC::::CM::::::M               M::::::MEE::::::EEEEEEEE:::::E     SSSSSSS     S:::::SFF:::::::FF           
+  A:::::A               A:::::ACC:::::::::::::::CM::::::M               M::::::ME::::::::::::::::::::E     S::::::SSSSSS:::::SF::::::::FF           
+ A:::::A                 A:::::A CCC::::::::::::CM::::::M               M::::::ME::::::::::::::::::::E     S:::::::::::::::SS F::::::::FF           
+AAAAAAA                   AAAAAAA   CCCCCCCCCCCCCMMMMMMMM               MMMMMMMMEEEEEEEEEEEEEEEEEEEEEE      SSSSSSSSSSSSSSS   FFFFFFFFFFF           
+                                                                                                                                                    
+                                                                                                                                              
+Application:          ${acme.application.versioned-name}
+Application endpoint: http://localhost:${server.port}${server.servlet.contextPath}
+Database endpoint:    ${spring.datasource.url}
+Powered by:           Spring Boot ${spring-boot.version}, ${acme.framework.display-name} ${acme.framework.version}
