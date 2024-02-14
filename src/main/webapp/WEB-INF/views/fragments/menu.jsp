@@ -24,6 +24,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-enrique" action="https://www.tboi.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-dani" action="https://www.pokerstars.es/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-alvaro" action="https://www.exteriores.gob.es/Embajadas/paris/es/Paginas/index.aspx"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-ibai" action="https://www.monsterhunter.com"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
