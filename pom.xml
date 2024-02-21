@@ -24,7 +24,7 @@
 	<name>Acme SF</name>
 	<description>Proyect to learn D&amp;T2 basic concepts</description>
 
-	<artifactId>Acme-SF-D01</artifactId>
+	<artifactId>Acme-SF-D02</artifactId>
 	
 	<packaging>war</packaging>
 	
