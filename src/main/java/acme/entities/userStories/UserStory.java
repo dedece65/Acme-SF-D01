@@ -33,7 +33,7 @@ public class UserStory extends AbstractEntity {
 	private String				description;
 
 	@Min(0)
-	private double				estimatedCost;   // preguntar tipo (podria ser Date) y restricciones
+	private Double				estimatedCost;   // preguntar tipo (podria ser Date) y restricciones
 
 	@NotBlank
 	@Length(max = 101)
