@@ -35,9 +35,10 @@ public class Project extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 101)
-	private String				abstracto;	// abstract es una palabra reservada
+	private String				$abstract;
 
-	private boolean				fatalErrors;  // no lo tengo del todo claro
+	//@NotNull
+	private boolean				fatalErrors;
 
 	@Min(0)
 	private double				cost;
