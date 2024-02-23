@@ -20,11 +20,11 @@ import lombok.Setter;
 @Setter
 public class UserStory extends AbstractEntity {
 
-	// Serialisation identifier ----------------------
+	// Serialisation identifier ----------------------------------------------
 
 	private static final long	serialVersionUID	= 1L;
 
-	// Attributes ------------------------------------
+	// Attributes ------------------------------------------------------------
 
 	@NotBlank
 	@Length(max = 76)
@@ -47,7 +47,9 @@ public class UserStory extends AbstractEntity {
 
 	private String				link;
 
-	// Relationships ---------------------------------------
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 
 	@NotNull
 	@Valid
