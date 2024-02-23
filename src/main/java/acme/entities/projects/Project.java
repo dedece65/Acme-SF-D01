@@ -19,11 +19,11 @@ import lombok.Setter;
 @Setter
 public class Project extends AbstractEntity {
 
-	// Serialisation identifier ----------------------
+	// Serialisation identifier ----------------------------------------------
 
 	private static final long	serialVersionUID	= 1L;
 
-	// Attributes ------------------------------------
+	// Attributes ------------------------------------------------------------
 
 	@Column(unique = true)
 	@NotBlank
@@ -46,5 +46,9 @@ public class Project extends AbstractEntity {
 	private Double				cost;
 
 	private String				link;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 
 }
