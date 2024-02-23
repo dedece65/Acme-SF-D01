@@ -5,6 +5,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
@@ -37,11 +38,12 @@ public class Project extends AbstractEntity {
 	@Length(max = 101)
 	private String				$abstract;
 
-	//@NotNull
-	private boolean				fatalErrors;
+	@NotNull
+	private Boolean				fatalErrors;
 
+	@NotNull
 	@Min(0)
-	private double				cost;
+	private Double				cost;
 
 	private String				link;
 
