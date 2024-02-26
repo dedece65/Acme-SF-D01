@@ -1,7 +1,7 @@
 
 package acme.entities.codeAudit;
 
-import java.time.Period;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,7 +33,12 @@ public class AuditRecord extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
-	private Period				period;
+	private Date				startDate;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Past
+	@NotNull
+	private Date				endDate;
 
 	@NotNull
 	private Mark				mark;

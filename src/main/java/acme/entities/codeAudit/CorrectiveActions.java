@@ -16,7 +16,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class correctiveActions extends AbstractEntity {
+public class CorrectiveActions extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
