@@ -50,6 +50,8 @@ public class UserStory extends AbstractEntity {
 	@Nullable
 	private String				link;
 
+	private boolean				published;
+
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
