@@ -1,7 +1,6 @@
 
 package acme.entities.projects;
 
-import javax.annotation.Nullable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -49,7 +48,6 @@ public class Project extends AbstractEntity {
 	private int					cost;
 
 	@URL
-	@Nullable
 	private String				link;
 
 	private boolean				published;		// draftMode

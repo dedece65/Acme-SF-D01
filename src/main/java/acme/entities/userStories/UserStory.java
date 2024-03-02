@@ -1,7 +1,6 @@
 
 package acme.entities.userStories;
 
-import javax.annotation.Nullable;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
@@ -47,7 +46,6 @@ public class UserStory extends AbstractEntity {
 	private Priority			priority;
 
 	@URL
-	@Nullable
 	private String				link;
 
 	private boolean				published;

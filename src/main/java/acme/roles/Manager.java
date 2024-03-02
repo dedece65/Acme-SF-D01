@@ -1,7 +1,6 @@
 
 package acme.roles;
 
-import javax.annotation.Nullable;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
@@ -36,7 +35,6 @@ public class Manager extends AbstractRole {
 	private String				certifications;
 
 	@URL
-	@Nullable
 	private String				link;
 
 	// Derived attributes -----------------------------------------------------
