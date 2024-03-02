@@ -1,14 +1,15 @@
 
 package acme.entities.projects;
 
+import javax.annotation.Nullable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.PositiveOrZero;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
 import lombok.Getter;
@@ -38,17 +39,29 @@ public class Project extends AbstractEntity {
 	@Length(max = 100)
 	private String				$abstract;
 
-	@NotNull
-	private Boolean				fatalErrors;
+	private boolean				fatalErrors;
 
-	@NotNull
-	@PositiveOrZero
-	private Double				cost;
+	@Min(0)
+	private int					cost;
 
+	@URL
+	@Nullable
 	private String				link;
+
+	private boolean				published;		// draftMode
 
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+	/*
+	 * falta crear el rol Manager
+	 * 
+	 * @NotNull
+	 * 
+	 * @Valid
+	 * 
+	 * @ManyToOne(optional = false)
+	 * private Manager manager;
+	 */
 
 }
