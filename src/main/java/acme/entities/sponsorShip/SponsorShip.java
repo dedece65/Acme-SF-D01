@@ -54,7 +54,7 @@ public class SponsorShip extends AbstractEntity {
 	@URL
 	private String				link;
 
-	// Derived attributes -----------------------------------------------------
+	// Derived attributes ----------------------------------------------------- 
 
 	// Relationships ----------------------------------------------------------
 
