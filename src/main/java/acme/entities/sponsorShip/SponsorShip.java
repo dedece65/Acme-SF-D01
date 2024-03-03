@@ -5,8 +5,11 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
@@ -14,6 +17,8 @@ import javax.validation.constraints.Positive;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.client.data.datatypes.Money;
+import acme.entities.projects.Project;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,7 +27,11 @@ import lombok.Setter;
 @Setter
 public class SponsorShip extends AbstractEntity {
 
+	// Serialisation identifier ----------------------------------------------
+
 	private static final long	serialVersionUID	= 1L;
+
+	// Attributes ------------------------------------------------------------
 
 	@Column(unique = true)
 	@NotBlank
@@ -30,12 +39,12 @@ public class SponsorShip extends AbstractEntity {
 	private String				code;
 
 	@Past
-	private LocalDate			moment; //LocalDate o LocalDateTime
+	private LocalDate			moment;
 
-	private LocalDate			duration; //Que se refiere con esto
+	private LocalDate			duration;
 
 	@Positive
-	private Double				amount;
+	private Money				amount;
 
 	private Type				type;
 
@@ -45,7 +54,13 @@ public class SponsorShip extends AbstractEntity {
 	@URL
 	private String				link;
 
-	//@ManyToOne
-	//private Project project;
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Project				project;
 
 }
