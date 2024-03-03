@@ -2,6 +2,7 @@
 package acme.entities.sponsorShip;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -40,10 +41,10 @@ public class SponsorShip extends AbstractEntity {
 	private Type				type;
 
 	@Email
-	private String				email;
+	private Optional<String>				email;
 
 	@URL
-	private String				link;
+	private Optional<String>				link;
 
 	//@ManyToOne
 	//private Project project;
