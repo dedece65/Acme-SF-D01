@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
@@ -24,7 +25,11 @@ import lombok.Setter;
 @Setter
 public class Invoice extends AbstractEntity {
 
+	// Serialisation identifier ----------------------------------------------
+
 	private static final long	serialVersionUID	= 1L;
+
+	// Attributes ------------------------------------------------------------
 
 	@Column(unique = true)
 	@NotBlank
@@ -37,6 +42,7 @@ public class Invoice extends AbstractEntity {
 	private LocalDate			dueDate;
 
 	@Positive
+	@NotNull
 	private Double				quantity;
 
 	@Positive
@@ -45,11 +51,15 @@ public class Invoice extends AbstractEntity {
 	@URL
 	private String				link;
 
+	// Derived attributes -----------------------------------------------------
+
 
 	@Transient
 	private Double totalAmount() {
 		return this.quantity + this.tax;
 	};
+
+	// Relationships ----------------------------------------------------------
 
 
 	@ManyToOne
