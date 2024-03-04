@@ -1,21 +1,24 @@
 
 package acme.entities.invoice;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.client.data.datatypes.Money;
 import acme.entities.sponsorShip.SponsorShip;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,20 +36,22 @@ public class Invoice extends AbstractEntity {
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "IN-[0-9]{4}-[0-9]{4}")
+	@Pattern(regexp = "^IN-[0-9]{4}-[0-9]{4}$")
 	private String				code;
 
+	@Temporal(TemporalType.DATE)
 	@Past
-	private LocalDate			registrationTime;
-
-	private LocalDate			dueDate;
-
-	@Positive
 	@NotNull
-	private Double				quantity;
+	private Date				registrationTime;
 
-	@Positive
-	private Double				tax;
+	@NotNull
+	private Date				dueDate;
+
+	@NotNull
+	private Money				quantity;
+
+	@NotNull
+	private Money				tax;
 
 	@URL
 	private String				link;
@@ -56,13 +61,15 @@ public class Invoice extends AbstractEntity {
 
 	@Transient
 	private Double totalAmount() {
-		return this.quantity + this.tax;
-	};
+		return this.quantity.getAmount() + this.tax.getAmount();
+	}
 
 	// Relationships ----------------------------------------------------------
 
 
-	@ManyToOne
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
 	private SponsorShip spornsorShip;
 
 }
