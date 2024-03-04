@@ -37,6 +37,6 @@ public class AssociatedWith extends AbstractEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private UserStory			userStroy;
+	private UserStory			userStory;
 
 }
