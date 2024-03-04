@@ -48,12 +48,15 @@ public class Objective extends AbstractEntity {
 	@NotNull
 	private Priority			priority;
 
+	@NotNull
 	private boolean				status;
 
+	@NotNull
 	@Min(1)
 	private int					duration;
 
 	@URL
+	@Length(max = 255)
 	private String				link;
 
 	// Derived attributes -----------------------------------------------------
