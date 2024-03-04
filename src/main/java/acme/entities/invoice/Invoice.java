@@ -1,20 +1,24 @@
 
 package acme.entities.invoice;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.client.data.datatypes.Money;
 import acme.entities.sponsorShip.SponsorShip;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,35 +28,48 @@ import lombok.Setter;
 @Setter
 public class Invoice extends AbstractEntity {
 
+	// Serialisation identifier ----------------------------------------------
+
 	private static final long	serialVersionUID	= 1L;
+
+	// Attributes ------------------------------------------------------------
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "IN-[0-9]{4}-[0-9]{4}")
+	@Pattern(regexp = "^IN-[0-9]{4}-[0-9]{4}$")
 	private String				code;
 
+	@Temporal(TemporalType.DATE)
 	@Past
-	private LocalDate			registrationTime;
+	@NotNull
+	private Date				registrationTime;
 
-	private LocalDate			dueDate;
+	@NotNull
+	private Date				dueDate;
 
-	@Positive
-	private Double				quantity;
+	@NotNull
+	private Money				quantity;
 
-	@Positive
-	private Double				tax;
+	@NotNull
+	private Money				tax;
 
 	@URL
 	private String				link;
 
+	// Derived attributes -----------------------------------------------------
+
 
 	@Transient
 	private Double totalAmount() {
-		return this.quantity + this.tax;
-	};
+		return this.quantity.getAmount() + this.tax.getAmount();
+	}
+
+	// Relationships ----------------------------------------------------------
 
 
-	@ManyToOne
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
 	private SponsorShip spornsorShip;
 
 }
