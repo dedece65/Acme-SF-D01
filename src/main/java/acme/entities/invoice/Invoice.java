@@ -1,5 +1,5 @@
 
-package acme.entities;
+package acme.entities.invoice;
 
 import java.time.LocalDate;
 
