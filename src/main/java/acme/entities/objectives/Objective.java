@@ -8,7 +8,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -39,7 +38,7 @@ public class Objective extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 75)
-	private String				tile;
+	private String				title;
 
 	@NotBlank
 	@Length(max = 100)
@@ -51,9 +50,13 @@ public class Objective extends AbstractEntity {
 	@NotNull
 	private boolean				status;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	@Min(1)
-	private int					duration;
+	private Date				executionPeriodStart;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	private Date				executionPeriodFinish;
 
 	@URL
 	@Length(max = 255)
