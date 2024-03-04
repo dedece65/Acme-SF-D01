@@ -1,11 +1,13 @@
 
 package acme.entities.sponsorShip;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -35,17 +37,23 @@ public class SponsorShip extends AbstractEntity {
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
+	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$")
 	private String				code;
 
+	@Temporal(TemporalType.DATE)
 	@Past
-	private LocalDate			moment;
+	@NotNull
+	private Date				moment;
 
-	private LocalDate			duration;
+	@Temporal(TemporalType.DATE)
+	@NotNull
+	private Date				duration;
 
 	@Positive
+	@NotNull
 	private Money				amount;
 
+	@NotNull
 	private Type				type;
 
 	@Email
