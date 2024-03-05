@@ -14,7 +14,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.URL;
 
@@ -40,16 +39,19 @@ public class Sponsorship extends AbstractEntity {
 	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$")
 	private String				code;
 
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
 	private Date				moment;
 
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	private Date				duration;
+	private Date				durationInitial;
 
-	@Positive
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	private Date				durationFinal;
+
 	@NotNull
 	private Money				amount;
 
