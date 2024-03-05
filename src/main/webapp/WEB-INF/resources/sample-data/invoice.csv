@@ -1,0 +1,27 @@
+key,code,registrationTime,dueDate,quantity,tax,link,key:sponsorship
+invoice-01,IN-0000-0000,2022/02/28 23:59,2022/09/28 23:59,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-01
+invoice-02,IN-9999-9999,2022/02/28 23:59,2022/09/28 23:59,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-02
+invoice-03,IN-9876-5432,2000/01/01 00:00,2022/09/28 23:59,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-02
+invoice-04,IN-2468-1357,2000/01/01 00:01,2022/09/28 23:59,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-03
+invoice-05,IN-7890-4321,2000/01/02 00:01,2022/09/28 23:59,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-03
+invoice-06,IN-6543-2109,2022/07/29 23:59,2022/09/28 23:59,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-03
+invoice-07,IN-9999-0000,2022/02/28 23:59,2022/03/29 00:01,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-04
+invoice-08,IN-0000-9999,2022/02/28 23:59,2022/03/29 00:00,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-05
+invoice-09,IN-3333-4444,2022/02/28 23:59,2099/12/31 23:59,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-06
+invoice-10,IN-8888-7777,2022/02/28 23:59,2022/07/30 00:01,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-07
+invoice-11,IN-6666-5555,2022/02/28 23:59,2022/07/29 23:59,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-08
+invoice-12,IN-4444-3333,2022/02/28 23:59,2022/09/28 23:59,EUR 0.01,EUR 125.5,https://github.com/,sponsorship-09
+invoice-13,IN-2222-1111,2022/02/28 23:59,2022/09/28 23:59,EUR 1.00,EUR 125.5,https://github.com/,sponsorship-10
+invoice-14,IN-2221-1112,2022/02/28 23:59,2022/09/28 23:59,EUR 10000.01,EUR 125.5,https://github.com/,sponsorship-11
+invoice-15,IN-2211-1122,2022/02/28 23:59,2022/09/28 23:59,USD 0.01,USD 125.5,https://github.com/,sponsorship-12
+invoice-16,IN-2111-1222,2022/02/28 23:59,2022/09/28 23:59,USD 1.00,USD 125.5,https://github.com/,sponsorship-13
+invoice-17,IN-1111-1111,2022/02/28 23:59,2022/09/28 23:59,USD 10000.01,USD 125.5,https://github.com/,sponsorship-14
+invoice-18,IN-2222-2222,2022/02/28 23:59,2022/09/28 23:59,EUR 125.5,EUR 0.00,https://github.com/,sponsorship-15
+invoice-19,IN-3333-3333,2022/02/28 23:59,2022/09/28 23:59,EUR 125.5,EUR 1.00,https://github.com/,sponsorship-16
+invoice-20,IN-4444-4444,2022/02/28 23:59,2022/09/28 23:59,EUR 125.5,EUR 10000.01,https://github.com/,sponsorship-17
+invoice-21,IN-5555-6666,2022/02/28 23:59,2022/09/28 23:59,USD 125.5,USD 0.00,https://github.com/,sponsorship-18
+invoice-22,IN-7777-7777,2022/02/28 23:59,2022/09/28 23:59,USD 125.5,USD 1.00,https://github.com/,sponsorship-19
+invoice-23,IN-8888-8888,2022/02/28 23:59,2022/09/28 23:59,USD 125.5,USD 10000.01,https://github.com/,sponsorship-20
+invoice-24,IN-8889-8889,2022/02/28 23:59,2022/09/28 23:59,EUR 125.5,EUR 125.5,null,sponsorship-21
+invoice-25,IN-8887-8887,2022/02/28 23:59,2022/09/28 23:59,EUR 125.5,EUR 125.5,https://github.com/,sponsorship-22
+invoice-26,IN-8887-8888,2022/02/28 23:59,2022/09/28 23:59,EUR 125.5,EUR 125.5,https://www.wordreference.com/es/,sponsorship-22

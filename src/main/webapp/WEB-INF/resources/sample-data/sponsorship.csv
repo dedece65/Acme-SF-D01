@@ -1,0 +1,23 @@
+key,code,moment,durationInitial,durationFinal,amount,type,email,link,key:project
+sponsorship-01,A-000,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-01
+sponsorship-02,A-999,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-02
+sponsorship-03,AA-000,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-03
+sponsorship-04,AA-999,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-04
+sponsorship-05,AAA-000,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-05
+sponsorship-06,AAA-999,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-06
+sponsorship-07,ABC-124,2000/01/01 00:00,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-07
+sponsorship-08,ABC-125,2000/01/01 00:01,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-08
+sponsorship-09,ABC-126,2022/07/29 23:59,2022/09/28 23:59,2022/10/28 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-09
+sponsorship-10,ABC-127,2022/02/28 23:59,2099/11/30 23:59,2099/12/31 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-10
+sponsorship-11,ABC-128,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-11
+sponsorship-12,ABC-129,2022/02/28 23:59,2022/03/01 00:00,2022/05/28 23:59,USD 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-12
+sponsorship-13,ABC-130,2022/02/28 23:59,2022/03/01 00:01,2022/05/28 23:59,USD 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-13
+sponsorship-14,ABC-131,2022/02/28 23:59,2022/03/28 23:59,2099/12/31 23:59,USD 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-14
+sponsorship-15,ABC-132,2022/02/28 23:59,2022/03/28 23:59,2022/04/28 23:59,EUR 150000.00,InKind,alvarochicocastellano@gmail.com,https://github.com/,project-15
+sponsorship-16,ABC-133,2022/02/28 23:59,2022/03/28 23:59,2022/05/01 00:00,EUR 150000.00,Financial,alvaro@gmail.com,https://github.com/,project-16
+sponsorship-17,ABC-134,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,alvarochico@gmail.com,https://github.com/,project-17
+sponsorship-18,ABC-135,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,USD 150000.00,Financial,null,https://github.com/,project-18
+sponsorship-19,ABC-136,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,a@gmail.com,https://github.com/,project-19
+sponsorship-20,ABC-137,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,EUR 150000.00,Financial,alvarochicocastellano@gmail.com,https://github.com/,project-20
+sponsorship-21,ABC-138,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,USD 150000.00,Financial,alvarochicocastellano@gmail.com,null,project-21
+sponsorship-22,ABC-139,2022/02/28 23:59,2022/03/28 23:59,2022/05/28 23:59,USD 150000.00,Financial,alvarochicocastellano@gmail.com,https://www.wordreference.com/es/,project-22
