@@ -1,12 +1,14 @@
 
 package acme.entities.training;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -16,6 +18,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.entities.projects.Project;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,33 +27,47 @@ import lombok.Setter;
 @Setter
 public class TrainingModule extends AbstractEntity {
 
-	/**
-	 * 
-	 */
+	// Serialisation identifier ----------------------------------------------
+
 	private static final long	serialVersionUID	= 1L;
+
+	// Attributes ------------------------------------------------------------
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}", message = "{validation.project.code}")
+	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$")
 	private String				code;
 
 	@NotNull
 	@Past
-	private LocalDate			creationMoment;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				creationMoment;
 
 	@NotBlank
 	@Length(max = 100)
 	private String				details;
 
+	@NotNull
 	private Difficulty			difficultyLevel;
 
 	@Past
 	@Temporal(TemporalType.TIMESTAMP)
-	private LocalDate			updateMoment;
+	private Date				updateMoment; // Preguntar after creation moment
 
 	@URL
+	@Length(max = 255)
 	private String				link;
 
+	@Valid
+	private Integer				totalTime;
+
+	// Derived attributes ----------------------- ------------------------------
+
+	// Relationships -----------------------------------------------------------
+
 	@NotNull
-	private LocalDate			totalTime; //Preguntar que tipo de variable es esta
+	@Valid
+	@OneToOne(optional = false)
+	private Project				project;
+
 }

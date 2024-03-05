@@ -5,6 +5,8 @@ import java.time.Period;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -22,25 +24,27 @@ import lombok.Setter;
 @Setter
 public class TrainingSession extends AbstractEntity {
 
-	/**
-	 * 
-	 */
+	// Serialisation identifier ----------------------------------------------
+
 	private static final long	serialVersionUID	= 1L;
+
+	// Attributes ------------------------------------------------------------
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "TS-[A-Z]{1,3}-[0-9]{3}", message = "{validation.project.code}")
+	@Pattern(regexp = "^TS-[A-Z]{1,3}-[0-9]{3}$")
 	private String				code;
 
 	@NotNull
-	private Period				period;
+	private Period				period; // Preguntar one week ahead of module creation moment
+	// y one week long
 
 	@NotBlank
-	@Length(max = 76)
+	@Length(max = 75)
 	private String				location;
 
 	@NotBlank
-	@Length(max = 76)
+	@Length(max = 75)
 	private String				instructor;
 
 	@NotBlank
@@ -51,4 +55,14 @@ public class TrainingSession extends AbstractEntity {
 	@URL
 	@Length(max = 255)
 	private String				link;
+
+	// Derived attributes ----------------------- ------------------------------
+
+	// Relationships -----------------------------------------------------------
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private TrainingModule		trainingModule;
+
 }
