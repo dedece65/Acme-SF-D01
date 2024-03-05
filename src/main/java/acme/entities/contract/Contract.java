@@ -41,7 +41,7 @@ public class Contract extends AbstractEntity {
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private Date				instationMoment;
+	private Date				instantiationMoment;
 
 	@NotBlank
 	@Length(max = 75)
