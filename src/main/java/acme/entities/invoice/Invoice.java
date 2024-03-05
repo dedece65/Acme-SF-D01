@@ -39,11 +39,12 @@ public class Invoice extends AbstractEntity {
 	@Pattern(regexp = "^IN-[0-9]{4}-[0-9]{4}$")
 	private String				code;
 
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
 	private Date				registrationTime;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	private Date				dueDate;
 
