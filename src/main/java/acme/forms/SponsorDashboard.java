@@ -7,9 +7,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class SponsorDashBoard extends AbstractForm {
+public class SponsorDashboard extends AbstractForm {
+
+	// Serialisation identifier -----------------------------------------------
 
 	private static final long	serialVersionUID	= 1L;
+
+	// Attributes -------------------------------------------------------------
 
 	Integer						invoicesWithTaxLessEqual21;
 	Integer						sponsorShipsWithLink;
@@ -21,5 +25,9 @@ public class SponsorDashBoard extends AbstractForm {
 	Double						deviationQuantityInvoices;
 	Double						minimunQuantityInvoices;
 	Double						maximumQuantityInvoices;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 
 }

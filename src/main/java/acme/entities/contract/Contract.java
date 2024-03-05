@@ -17,6 +17,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
 import acme.client.data.AbstractEntity;
+import acme.client.data.datatypes.Money;
 import acme.entities.projects.Project;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,13 +35,13 @@ public class Contract extends AbstractEntity {
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "[A-Z]{1,3}-[0- 9]{3}")
+	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$")
 	private String				code;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private Date				instationMoment;
+	private Date				instantiationMoment;
 
 	@NotBlank
 	@Length(max = 75)
@@ -54,7 +55,8 @@ public class Contract extends AbstractEntity {
 	@Length(max = 100)
 	private String				goals;
 
-	private Double				budget;
+	@NotNull
+	private Money				budget;
 
 	// Derived attributes ----------------------- ------------------------------
 
