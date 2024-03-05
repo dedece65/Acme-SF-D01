@@ -55,7 +55,7 @@ public class Invoice extends AbstractEntity {
 	private Money				tax;
 
 	@URL
-	@Length(max = 75)
+	@Length(max = 255)
 	private String				link;
 
 	// Derived attributes -----------------------------------------------------
