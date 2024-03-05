@@ -1,21 +1,27 @@
 
 package acme.entities.risk;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
-import javax.validation.constraints.Min;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.entities.projects.Project;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,39 +30,55 @@ import lombok.Setter;
 @Setter
 public class Risk extends AbstractEntity {
 
-	/**
-	 * 
-	 */
+	// Serialisation identifier ----------------------------------------------
+
 	private static final long	serialVersionUID	= 1L;
+
+	// Attributes ------------------------------------------------------------
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "R-[0-9]{3}", message = "{validation.project.code}")
+	@Pattern(regexp = "^R-[0-9]{3}$")
 	private String				reference;
 
+	@NotNull
+	private RiskType			type;
+
 	@Past
-	private LocalDate			identificationDate;
+	@Temporal(TemporalType.DATE)
+	@NotNull
+	private Date				identificationDate;
 
 	@NotNull
-	@Min(0)
-	private Integer				impact;
+	@Positive
+	private double				impact;
 
-	@Min(0)
-	private Double				probability;
-
-
-	@Transient
-	private Double value() {
-		return this.impact * this.probability;
-	}
-
+	@NotNull
+	@PositiveOrZero
+	private double				probability; // Preguntar si esta bien y como se acota
 
 	@NotBlank
 	@Length(max = 100)
-	private String	description;
+	private String				description;
 
 	@URL
-	@Length(max = 100)
-	private String	link;
+	@Length(max = 255)
+	private String				link;
+
+	// Derived attributes ----------------------- ------------------------------
+
+
+	@Transient
+	private double value() {
+		return this.impact * this.probability;
+	}
+
+	// Relationships ----------------------------------------------------------
+
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Project project;
 
 }
