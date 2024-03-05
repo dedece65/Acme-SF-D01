@@ -34,17 +34,14 @@ public class Notice extends AbstractEntity {
 	@Past
 	protected Date				instantiationMoment;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 75)
 	private String				title;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 75)
 	private String				author;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 100)
 	private String				message;
