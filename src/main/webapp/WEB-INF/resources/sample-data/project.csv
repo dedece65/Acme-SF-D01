@@ -1,4 +1,4 @@
-key,code,title,$abstract,fatalErrors,cost,link,published,key:manager
+key,code,title,$abstract,fatal-errors,cost,link,published,key:manager
 project-01,AMN-4567,t,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
 project-02,BMN-4567,ti,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
 project-03,CMN-4567,esto es un title de exactamente 75 caracteres - - - - - - - - - - - - - - -,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
