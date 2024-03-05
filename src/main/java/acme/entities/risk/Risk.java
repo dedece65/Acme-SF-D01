@@ -6,13 +6,13 @@ import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Transient;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
@@ -52,10 +52,11 @@ public class Risk extends AbstractEntity {
 
 
 	@NotBlank
-	@Max(100)
+	@Length(max = 100)
 	private String	description;
 
 	@URL
+	@Length(max = 100)
 	private String	link;
 
 }
