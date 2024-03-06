@@ -34,7 +34,7 @@ public class AuditRecord extends AbstractEntity {
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "^AU-[0-9]{4}-[0-9]{3}$")
+	@Pattern(regexp = "^AU-[0-9]{4}-[0-9]{3}$", message = "{validation.project.code}")
 	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
