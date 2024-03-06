@@ -42,10 +42,8 @@ public class Project extends AbstractEntity {
 	@Length(max = 100)
 	private String				$abstract;
 
-	@NotNull
 	private boolean				fatalErrors;
 
-	@NotNull
 	@Min(0)
 	private int					cost;
 
@@ -53,7 +51,7 @@ public class Project extends AbstractEntity {
 	@Length(max = 255)
 	private String				link;
 
-	private boolean				published;		// draftMode
+	private boolean				published;
 
 	// Derived attributes -----------------------------------------------------
 

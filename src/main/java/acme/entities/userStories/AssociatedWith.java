@@ -24,9 +24,6 @@ public class AssociatedWith extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
-	@NotNull
-	private boolean				published;
-
 	// Relationships ----------------------------------------------------------
 
 	@NotNull
