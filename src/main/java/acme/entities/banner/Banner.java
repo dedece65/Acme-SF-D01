@@ -44,6 +44,8 @@ public class Banner extends AbstractEntity {
 	private Date				displayEndDate;
 
 	@NotBlank
+	@URL
+	@Length(max = 255)
 	private String				picture;
 
 	@NotBlank
