@@ -1,5 +1,5 @@
 
-package acme.entities.invoice;
+package acme.entities.codeAudit;
 
 import java.util.Date;
 
@@ -8,10 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -21,15 +18,14 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.client.data.datatypes.Money;
-import acme.entities.sponsorship.Sponsorship;
+import acme.entities.projects.Project;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Invoice extends AbstractEntity {
+public class Audit extends AbstractEntity {
 
 	// Serialisation identifier ----------------------------------------------
 
@@ -39,23 +35,16 @@ public class Invoice extends AbstractEntity {
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "^IN-[0-9]{4}-[0-9]{4}$")
+	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$", message = "{validation.project.code}")
 	private String				code;
 
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
-	private Date				registrationTime;
+	private Date				executionDate;
 
 	@NotNull
-	private Date				dueDate;
-
-	@NotNull
-	private Money				quantity;
-
-	@DecimalMin(value = "0.0")
-	@DecimalMax(value = "1.0")
-	private double				tax;
+	private AuditType			type;
 
 	@URL
 	@Length(max = 255)
@@ -63,18 +52,10 @@ public class Invoice extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
-
-	@Transient
-	private Double totalAmount() {
-		return this.quantity.getAmount() + this.tax * this.quantity.getAmount();
-	}
-
 	// Relationships ----------------------------------------------------------
-
-
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Sponsorship sponsorship;
+	private Project				project;
 
 }
