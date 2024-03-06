@@ -5,8 +5,10 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -16,6 +18,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.entities.projects.Project;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,11 +27,15 @@ import lombok.Setter;
 @Setter
 public class Audit extends AbstractEntity {
 
+	// Serialisation identifier ----------------------------------------------
+
 	private static final long	serialVersionUID	= 1L;
+
+	// Attributes ------------------------------------------------------------
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
+	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$")
 	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -39,12 +46,16 @@ public class Audit extends AbstractEntity {
 	@NotNull
 	private AuditType			type;
 
-	//	@NotBlank
-	//	@Length(max = 101)
-	//	private String				correctiveActions;
-
 	@URL
 	@Length(max = 255)
 	private String				link;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Project				project;
 
 }
