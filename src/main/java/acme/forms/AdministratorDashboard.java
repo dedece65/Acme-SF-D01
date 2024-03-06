@@ -15,11 +15,11 @@ public class AdministratorDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	Integer						numManagerPrincipals;
-	Integer						numClientPrincipals;
-	Integer						numDeveloperPrincipals;
-	Integer						numSponsorPrincipals;
-	Integer						numAuditorPrincipals;
+	int							numManagerPrincipals;
+	int							numClientPrincipals;
+	int							numDeveloperPrincipals;
+	int							numSponsorPrincipals;
+	int							numAuditorPrincipals;
 	Double						ratioNoticesWithEmailAndLink;
 	Double						ratioCriticalObjectives;
 	Double						ratioNonCriticalObjectives;
