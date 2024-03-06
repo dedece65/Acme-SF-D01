@@ -26,11 +26,15 @@ import lombok.Setter;
 @Setter
 public class AuditRecord extends AbstractEntity {
 
+	// Serialisation identifier ----------------------------------------------
+
 	private static final long	serialVersionUID	= 1L;
+
+	// Attributes ------------------------------------------------------------
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "AU-[0-9]{4}-[0-9]{3}")
+	@Pattern(regexp = "^AU-[0-9]{4}-[0-9]{3}$")
 	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -49,6 +53,10 @@ public class AuditRecord extends AbstractEntity {
 	@URL
 	@Length(max = 255)
 	private String				link;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 
 	@NotNull
 	@Valid
