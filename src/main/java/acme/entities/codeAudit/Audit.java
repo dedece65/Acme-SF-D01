@@ -1,20 +1,24 @@
 
 package acme.entities.codeAudit;
 
-import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
+
 import acme.client.data.AbstractEntity;
+import acme.entities.projects.Project;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,31 +27,35 @@ import lombok.Setter;
 @Setter
 public class Audit extends AbstractEntity {
 
-	private static final long				serialVersionUID	= 1L;
+	// Serialisation identifier ----------------------------------------------
+
+	private static final long	serialVersionUID	= 1L;
+
+	// Attributes ------------------------------------------------------------
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
-	private String							code;
+	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$", message = "{validation.project.code}")
+	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
-	private Date							executionDate;
+	private Date				executionDate;
 
 	@NotNull
-	private AuditType						type;
+	private AuditType			type;
 
-	@OneToMany(mappedBy = "audit")
-	private Collection<AuditRecord>			auditRecords;
+	@URL
+	@Length(max = 255)
+	private String				link;
 
-	@OneToMany(mappedBy = "audit")
-	private Collection<CorrectiveActions>	correctiveActions;
+	// Derived attributes -----------------------------------------------------
 
-	//	@NotBlank
-	//	@Length(max = 101)
-	//	private String				correctiveActions;
-
-	private String							link;
+	// Relationships ----------------------------------------------------------
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Project				project;
 
 }
