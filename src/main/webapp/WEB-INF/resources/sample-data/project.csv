@@ -1,30 +1,31 @@
 key,code,title,$abstract,fatal-errors,cost,link,published,key:manager
-project-01,AMN-4567,t,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-02,BMN-4567,ti,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-03,CMN-4567,esto es un title de exactamente 75 caracteres - - - - - - - - - - - - - - -,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-04,DMN-4567,esto es un title de exactamente 73 caracteres - - - - - - - - - - - - - -,Aabstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-05,EMN-4567,esto es un title de 33 caracteres,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-06,FMN-4567,你好,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-07,GMN-4567,<h3>Soy Jaime :)</h3>,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-08,HMN-4567,title estándar,a,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-09,IMN-4567,title estándar,ab,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-10,JMN-4567,title estándar,esto es un abstractt de exactamente 100 caracteres - - - - - - - - - - - - - - - - - - - - - - - - -,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-11,KMN-4567,title estándar,esto es un abstractt de exactamente 99 caracteres - - - - - - - - - - - - - - - - - - - - - - - - -,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-12,LMN-4567,title estándar,esto es un abstractt de exactamente 49 caracteres,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-13,MMN-4567,title estándar,你好,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-14,NMN-4567,title estándar,<h3>Soy Jaime :)</h1>,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-15,OMN-4567,title estándar,abstract estándar,false,5,https://github.com/Jaime-Linares,false,manager-01
-project-16,PMN-4567,title estándar,abstract estándar,true,0,https://github.com/Jaime-Linares,false,manager-01
-project-17,QMN-4567,title estándar,abstract estándar,true,1,https://github.com/Jaime-Linares,false,manager-01
-project-18,RMN-4567,title estándar,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
-project-19,SMN-4567,title estándar,abstract estándar,true,255,https://github.com/Jaime-Linares,false,manager-01
-project-20,TMN-4567,title estándar,abstract estándar,true,5,null,false,manager-01
-project-21,VMN-4567,title estándar,abstract estándar,true,5,ftp://ftp.microsoft.com/,false,manager-01
-project-22,WMN-4567,title estándar,abstract estándar,true,5,http://happybirthday.com,false,manager-01
-project-23,XMN-4567,title estándar,abstract estándar,false,5,https://github.com/Jaime-Linares,true,manager-01
-project-24,YMN-4567,title estándar,abstract estándar,false,5,https://github.com/Jaime-Linares,false,manager-02
-project-25,AAA-0000,title estándar,abstract estándar,false,5,https://github.com/Jaime-Linares,false,manager-03
-project-26,AAA-9999,title estándar,abstract estándar,false,5,https://github.com/Jaime-Linares,false,manager-03
-project-27,ZZZ-0000,title estándar,abstract estándar,false,5,https://github.com/Jaime-Linares,false,manager-03
-project-28,ZZZ-9999,title estándar,abstract estándar,false,5,https://github.com/Jaime-Linares,true,manager-02
-project-29,SUS-4567,t,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-26
+project-01,JLB-4567,title estándar,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-02,AMN-4567,t,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-03,BMN-4567,ti,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-04,CMN-4567,esto es un title de exactamente 75 caracteres - - - - - - - - - - - - - - -,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-05,DMN-4567,esto es un title de exactamente 74 caracteres - - - - - - - - - - - - - --,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-06,EMN-4567,esto es un title de 33 caracteres,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-07,FMN-4567,你好,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-08,GMN-4567,<h3>Soy Jaime :)</h3>,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-09,HMN-4567,title estándar,a,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-10,IMN-4567,title estándar,ab,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-11,JMN-4567,title estándar,esto es un abstractt de exactamente 100 caracteres - - - - - - - - - - - - - - - - - - - - - - - - -,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-12,KMN-4567,title estándar,esto es un abstractt de exactamente 99 caracteres - - - - - - - - - - - - - - - - - - - - - - - - -,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-13,LMN-4567,title estándar,esto es un abstractt de exactamente 49 caracteres,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-14,MMN-4567,title estándar,你好,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-15,NMN-4567,title estándar,<h3>Soy Jaime :)</h1>,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-16,OMN-4567,title estándar,abstract estándar,false,5,https://github.com/Jaime-Linares,false,manager-01
+project-17,PMN-4567,title estándar,abstract estándar,true,0,https://github.com/Jaime-Linares,false,manager-01
+project-18,QMN-4567,title estándar,abstract estándar,true,1,https://github.com/Jaime-Linares,false,manager-01
+project-19,RMN-4567,title estándar,abstract estándar,true,5,https://github.com/Jaime-Linares,false,manager-01
+project-20,SMN-4567,title estándar,abstract estándar,true,999,https://github.com/Jaime-Linares,false,manager-01
+project-21,SMN-4567,title estándar,abstract estándar,true,1000,https://github.com/Jaime-Linares,false,manager-01
+project-22,TMN-4567,title estándar,abstract estándar,true,5,,false,manager-01
+project-23,VMN-4567,title estándar,abstract estándar,true,5,http://happybirthday.com,false,manager-01
+project-24,WMN-4567,title estándar,abstract estándar,true,5,https://www.ejemplo.com?,false,manager-01
+project-25,WMN-4567,title estándar,abstract estándar,true,5,https://www.ejemplo.com/pagina?parametro1=valor1&parametro2=valor2,false,manager-01
+project-26,WMN-4567,title estándar,abstract estándar,true,5,ftp://ftp.microsoft.com/,false,manager-01
+project-27,WMN-4567,title estándar,abstract estándar,true,5,ftp://ftp.example.com/file.txt?user=username&password=12345,false,manager-01
+project-28,WMN-4567,title estándar,abstract estándar,true,5,http://acmejob255caracteres------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------/,false,manager-01
+project-29,XMN-4567,title estándar,abstract estándar,false,5,https://github.com/Jaime-Linares,true,manager-01
+project-30,YMN-4567,title estándar,abstract estándar,false,5,https://github.com/Jaime-Linares,false,manager-02
