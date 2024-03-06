@@ -1,0 +1,1 @@
+validation.project.code = The code of a project must follow the pattern [A-Z]{3}-[0-9]{4}
