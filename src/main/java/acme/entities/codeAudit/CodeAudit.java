@@ -19,13 +19,14 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
 import acme.entities.projects.Project;
+import acme.roles.Auditor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Audit extends AbstractEntity {
+public class CodeAudit extends AbstractEntity {
 
 	// Serialisation identifier ----------------------------------------------
 
@@ -46,6 +47,10 @@ public class Audit extends AbstractEntity {
 	@NotNull
 	private AuditType			type;
 
+	@NotBlank
+	@Length(max = 100)
+	private String				correctiveActions;
+
 	@URL
 	@Length(max = 255)
 	private String				link;
@@ -57,5 +62,10 @@ public class Audit extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Project				project;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Auditor				auditor;
 
 }

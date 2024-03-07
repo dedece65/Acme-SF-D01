@@ -27,6 +27,6 @@ public class CorrectiveActions extends AbstractEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Audit				audit;
+	private CodeAudit				audit;
 
 }
