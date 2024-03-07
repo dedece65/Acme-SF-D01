@@ -1,1 +1,2 @@
 validation.project.code	= El código de un proyecto tiene que seguir el patrón [A-Z]{3}-[0-9]{4}
+validation.sponsorship.code	= El código de un patrocinio tiene que seguir el patrón X-000 o XX-000 o XXX-000
